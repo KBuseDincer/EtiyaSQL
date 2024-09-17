@@ -12,7 +12,7 @@
 
 --SELECT productname, unitprice from Products;
 
---select productname from Products
+--select upper(productname) from Products
 --where productname LIKE '%C%';
 
 --SELECT productname from Products
