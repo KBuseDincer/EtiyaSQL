@@ -21,7 +21,11 @@
 --select * from Products
 --where unitsinstock>50;
 
---select productname, MIN(unitprice), MAX(unitprice) from Products;
+--SELECT * from Products
+WHERE unitprice = (SELECT MAX(unitprice) FROM Products)
+UNION
+SELECT * from Products
+WHERE unitprice = (SELECT MIN(unitprice) FROM Products);
 
 --select productname from Products
 --where productname LIKE '%Spice%';
